@@ -1,0 +1,10 @@
+# How to use p_eta_sq #
+
+#import edwards_r2 into your environment
+source("https://github.com/joelleforestier/p_eta_sq/raw/main/p_eta_sq.R")
+
+#run your model using the aov function
+model <- aov(dv ~ iv1*iv2, data = df)
+
+#use p_eta_sq to calculate partial eta squared for each predictor in your model
+p_eta_sq(model)
